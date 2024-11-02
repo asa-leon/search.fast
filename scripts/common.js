@@ -2,14 +2,24 @@
 function setColorByTime() {
 	const hour = new Date().getHours();
 	const body = document.body;
-
-	console.log(hour);
+	const themeTogglableClasses = document.getElementsByClassName('theme-togglable')
 	
 	if (hour >= 8 && hour < 20) {
-		body.className = 'light-theme';
+		
+		for (let i = 0; i < themeTogglableClasses.length; i++) {
+			const element = themeTogglableClasses[i];
+			element.classList.add('light-theme');
+		}
+		
 	} else {
-		body.className = 'dark-theme';
+		for (let i = 0; i < themeTogglableClasses.length; i++) {
+			const element = themeTogglableClasses[i];
+			element.classList.add('dark-theme');
+		}
 	}
 }
 
-window.onload = setColorByTime;
+window.onload = function() {
+	setColorByTime();
+	isFound();
+}

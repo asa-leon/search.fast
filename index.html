@@ -7,16 +7,29 @@
 	<title>Search.fast - WorkEasy Project</title>
 	<link rel="stylesheet" href="./styles/basis.css">
 </head>
-<body>
+<body class="theme-togglable">
 	<div class="container">
-		<div id="searchConsole" class="search-console found">
+
+		<section id="searchConsole" class="search-console">
 			<h1>Search Fast</h1>
-				<form action="" method="get">
-					<input type="text" name="searchText" id="search-text" placeholder="スペース区切りで検索できます">
-				</form>
-		</div>
+			<p class="t-center">
+				Find out notes by a word 'where' did I get the information from,<br>
+					and 'what' I have learned.
+			</p>
+			<form action="" method="get">
+				<input class="theme-togglable " type="text" name="searchText" id="search-text" placeholder="どこで聞いた（省略可能）［スペース］何を知りたい？" value="">
+				<button id="searchBtn" class="search-btn" type="submit">🏓</button>
+			</form>
+			<span id="notice">何も見つかりませんでした</span>
+		</section>
+
+		<section id="resultsContainer" class="theme-togglable">
+			
+		</section>
+
 	</div>
 
 	<script src="./scripts/common.js"></script>
+	<script src="./scripts/interactive.js"></script>
 </body>
 </html>

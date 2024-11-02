@@ -1,0 +1,79 @@
+@use './common' as *;
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	&.light-theme {
+		@include light-background;
+		color: $light-text;
+	}
+	&.dark-theme {
+		background-color: $dark-background;
+		color: $dark-text;
+	}
+	@include default-sans-serif;
+	text-decoration: none;
+}
+
+.search-console {
+	width: 100%;
+	height: 240px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-evenly;
+	transition: height 500ms ease-in-out;
+
+	h1 {
+		font-size: 5rem;
+		transition: font-size 500ms ease-in-out;
+	}
+
+	form {
+		width: 100%;
+		display: flex;
+		justify-content: center;
+
+		input {
+			width: 60%;
+			height: 40px;
+			padding: 5px 25px;
+			border-color: transparent;
+			border-radius: 50px;
+			font-size: 1.2rem;
+			outline-color: white;
+			transition: 
+				width 500ms ease-in-out,
+				height 500ms ease-in-out,
+				padding 500ms ease-in-out,
+				font-size 500ms ease-in-out,
+				outline-color 300ms linear;
+
+			&:focus-visible {
+				outline-color: silver;
+			}
+		}
+	}
+
+	// or `.search-console.found`
+	&.found {
+		height: 120px;
+
+		h1 {
+			font-size: 3rem;
+		}
+		
+		input {
+			width: 30%;
+			height: 20px;
+			padding: 3px 20px;
+			font-size: 1rem;
+		}
+	}
+}
+
+
+

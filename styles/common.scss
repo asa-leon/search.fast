@@ -1,0 +1,21 @@
+$light-text: #efefef;
+@mixin light-background {
+	background: 
+		linear-gradient(225deg, rgba(216, 86, 0, 0.5), rgba(23, 196, 0, 0.3)),
+		linear-gradient(135deg, rgba(115, 0, 192, 0.7), rgba(1, 20, 133, 0.8));
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+}
+
+$dark-text: #efefef;
+$dark-background: #1e1e1e;
+
+@mixin default-sans-serif {
+	font-family:system-ui, -apple-system, BlinkMacSystemFont, 'メイリオ', 'Meiryo', 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+}
+
+.container {
+	width: 90%;
+	height: 100vh;
+	margin: 0 auto;
+}
